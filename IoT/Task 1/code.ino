@@ -1,3 +1,7 @@
+// IoT
+// Task 1
+// LED and ESP32
+
 /*
 Webpages:
 Red: https://najat01.github.io/123/Red
@@ -12,7 +16,7 @@ Off: https://najat01.github.io/123/Off
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
-const String url = "https://najat01.github.io/123/Red";
+const String url = "https://najat01.github.io/123/Blue";
 String payload = "";
 void setup() {
   Serial.begin(115200);
@@ -20,7 +24,7 @@ void setup() {
   pinMode(25, OUTPUT); //Red
   pinMode(33, OUTPUT); //White
   pinMode(32, OUTPUT); //Blue
-  pinMode(35, OUTPUT); //Green
+  pinMode(26, OUTPUT); //Green
   Serial.print("Connecting to WiFi");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -48,7 +52,7 @@ void loop() {
     Serial.println();
     Serial.println(payload);
     if( payload == "Green" ){
-      digitalWrite(35, HIGH);
+      digitalWrite(26, HIGH);
     }
     else if( payload == "Blue" ){
       digitalWrite(32, HIGH);
@@ -63,7 +67,7 @@ void loop() {
       digitalWrite(25, LOW);
       digitalWrite(33, LOW);
       digitalWrite(32, LOW);
-      digitalWrite(35, LOW);
+      digitalWrite(26, LOW);
     }
 
 
