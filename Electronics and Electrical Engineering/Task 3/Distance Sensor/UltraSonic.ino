@@ -1,3 +1,7 @@
+// Electronics and Electrical Engineering
+// Task 3
+//Utlra Sonic
+
 // define the  pin numbers
 const int trigPin = 8;
 const int echoPin = 9;
